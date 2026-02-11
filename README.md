@@ -25,5 +25,18 @@ The objective was to assess authentication controls, session behaviour, and priv
 An Nmap scan revealed two open ports:
   -SSH on port [22]
   -PHP web server on port [1337]
-  
+
+  **nmap -sC -sV -p- <hammer.thm>**
   ![Nmap Scan](screenshots/nmapresults.png) 
+
+# Directory Enumeration & Password Reset Analysis
+Using Feroxbuster, directory enumeration was performed against the web server. Modified dirb wordlists were used. 
+
+
+feroxbuster -u http://hammer.thm:1337 -w <wordlist>
+![Directory Enumeration](./screenshots/02_directory_enum.png)
+
+This HMR discovery allows use to modifiy the dirb wordlist in a seperate directory to the scan spefically for HMR.
+
+![Directory Enumeration](./screenshots/02_directory_enum.png)
+An error directory was discovered that showed evidence of previous password reset attempts. This revealed the existence of a password recovery mechanism for:
