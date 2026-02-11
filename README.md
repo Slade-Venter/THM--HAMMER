@@ -26,4 +26,4 @@ An Nmap scan revealed two open ports:
   -SSH on port [22]
   -PHP web server on port [1337]
   
-  ![Nmap Scan](./screenshots/1._nmap_results.png) 
+  ![Nmap Scan](.screenshots/1. nmap results.png) 
