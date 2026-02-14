@@ -257,7 +257,7 @@ The `persistentSession` parameter influenced session lifetime. Modifying the coo
 
 ![Cookie Expiry](screenshots/Cookieexpiry.png)
 
-A submitCommand function was identified which sent an AJAX request to the server containing user-supplied input. The request included a JWT token and resulted in backend command execution.
+A submitCommand function was identified which sent an `AJAX` request to the server containing user-supplied input. The request included a JWT token and resulted in backend command execution.
 This behaviour represents command transmission, where client input is passed to the server and interpreted as system-level instructions. This is security sensitive because insufficient validation can allow attackers to execute arbitrary commands on the host.
 
 That means we have possible RCE (Remote Code Execution).
@@ -317,7 +317,7 @@ Session validity must be determined entirely by the server. Each session identif
 
 JWT Authorisation | Critical Risk (CVSS ~ 9.8)
 
-The kid field should reference only keys from a predefined server keystore and never a file path. Signing secrets must not be retrievable through application functionality. The server should validate expected claims such as role and issuer and not trust any value simply because the token signature is valid.
+The `kid` field should reference only keys from a predefined server keystore and never a file path. Signing secrets must not be retrievable through application functionality. The server should validate expected claims such as role and issuer and not trust any value simply because the token signature is valid.
 
 Command Execution | Critical Risk (CVSS ~ 10.0)
 
@@ -326,4 +326,4 @@ Web requests should not directly execute system commands. Administrative actions
 
 I try treat these types of rooms as client engagements rather than simple CTFs. I hope you enjoyed and I hope it helped you.
 
-<sub>Make sure you look at your key file as time goes on THM will change the secrets file as tokens expire.<sub>
+<sub>Make sure you look at your key file as time goes on THM will change the secrets file as tokens expire.</sub>
